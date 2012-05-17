@@ -1,0 +1,42 @@
+name: 9gag
+main: com.gmail.predoklesec.NineGag
+version: 1.0
+commands:
+   9gag:
+      description: Gets all new 9gag posts.
+      usage: /<command>
+      permission: <plugin name>.9gag
+      permission-message: You dont have <permission>
+   9gag reload:
+      description: Reload config.yml
+      usage: /9gag <command>
+      permission: <plugin name>.9gag.reload
+      permission-message: You dont have <permission>
+   9gag set interval:
+      description: Set interval in minutes.
+      usage: /9gag set <command>
+      permission: <plugin name>.9gag.interval
+      permission-message: You dont have <permission>
+   9gag set topic:
+      description: Set topic to hot or trending.
+      usage: /9gag set <command>
+      permission: <plugin name>.9gag.topic
+      permission-message: You dont have <permission>
+permissions:
+    9gag.*:
+        description: Allows you go get new 9gag post(s).
+        children:
+            9gag.set.topic: true
+            9gag.set.interval: true
+            9gag.get: true
+            9gag.reload: true
+            9gag.next: true
+    9gag.set.interval:
+        description: Allows you to set interval in minutes.
+        default: op
+    9gag.reload:
+        description: Reloads the plugin.
+        default: op
+    9gag.set.topic:
+        description: Allows you to set topic.
+        default: op

@@ -1,0 +1,7 @@
+#default configuration file for 9gag plugin -Viti
+Interval: 10
+Topic: trending
+TitleColor: c
+LinkColor: 3
+9gagColor: f
+
